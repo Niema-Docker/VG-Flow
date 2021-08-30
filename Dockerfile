@@ -9,5 +9,8 @@ RUN apk update && \
     mv jbaaijens-vg-flow-* /usr/local/bin/vg-flow && \
     chmod a+x /usr/local/bin/vg-flow/scripts/*.py && \
     for f in /usr/local/bin/vg-flow/scripts/*.py ; do ln -s $f /usr/local/bin/$(echo $f | rev | cut -d'/' -f1 | rev) ; done && \
-    pip install --no-cache-dir numpy wheel
+    pip install --no-cache-dir numpy && \
+    wget -qO- "https://packages.gurobi.com/9.1/gurobi9.1.2_linux64.tar.gz" | tar -zx && \
+    cd gurobi* && \
+    
     # TODO CONTINUE HERE
