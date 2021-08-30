@@ -9,5 +9,5 @@ RUN apk update && \
     mv jbaaijens-vg-flow-* /usr/local/bin/vg-flow && \
     chmod a+x /usr/local/bin/vg-flow/scripts/*.py && \
     for f in /usr/local/bin/vg-flow/scripts/*.py ; do ln -s $f /usr/local/bin/$(echo $f | rev | cut -d'/' -f1 | rev) ; done && \
-    pip install numpy
+    pip install --no-cache-dir numpy
     # TODO CONTINUE HERE
