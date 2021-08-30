@@ -8,7 +8,7 @@ RUN apt-get update && apt-get upgrade && \
     echo "deb [ arch=amd64 ] https://downloads.skewed.de/apt buster main" >> /etc/apt/sources.list && \
     apt-key adv --keyserver keys.openpgp.org --recv-key 612DEFB798507F25 && \
     apt-get update && apt-get install -y python3-graph-tool && \
-    pip3 install --no-cache-dir biopython graph-tool gurobipy numpy && \
+    pip3 install --no-cache-dir biopython gurobipy numpy && \
     wget -qO- "https://bitbucket.org/jbaaijens/vg-flow/get/v0.0.4.tar.gz" | tar -zx && \
     mv jbaaijens-vg-flow-* /usr/local/bin/vg-flow && \
     chmod a+x /usr/local/bin/vg-flow/scripts/*.py && \
